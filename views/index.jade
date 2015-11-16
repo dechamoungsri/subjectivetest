@@ -1,0 +1,168 @@
+extends layout
+
+block content
+	h1 สวัสดีมิตรสหาย ขอเรียนเชิญร่วมประเมิณเสียงสังเคราะห์เพื่อการพัฒนางานวิจัยเสียงสังเคราะห์ภาษาไทยอย่างยั่งยืน
+	p Welcome to แบบทดสอบเสียงสังเคราะห์
+
+	h3 Nickname : 
+	input#nickname(type='text', name='nickname', value='Nickname')
+
+	div#mossection
+		h2#soundindex Mos Test 1. 
+		h2 การประเมินผลที่ 1 : โปรดให้คะแนนเสียงสังเคราะห์ โดยพิจารณาจากความเป็นธรรมชาติของเสียง
+		div
+			audio#audiosection0(src='', controls='controls') 
+			br
+
+			p Score :
+			form
+				input#moshidden0(type='hidden', name='hiddenmosscore0', value='')
+				input(type='radio', name='mosscore0', value='1')
+				|  1 Bad
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore0', value='2')
+				|  2 Poor
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore0', value='3')
+				|  3 Fair
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore0', value='4')
+				|  4 Good
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore0', value='5')
+				|  5 Excellent
+				|	&nbsp &nbsp
+			
+			br
+
+		div
+
+			audio#audiosection1(src='', controls='controls') 
+			br
+
+			p Score :
+			form
+				input#moshidden1(type='hidden', name='hiddenmosscore1', value='')
+				input(type='radio', name='mosscore1', value='1')
+				|  1 Bad
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore1', value='2')
+				|  2 Poor
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore1', value='3')
+				|  3 Fair
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore1', value='4')
+				|  4 Good
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore1', value='5')
+				|  5 Excellent
+				|	&nbsp &nbsp
+
+		br
+
+		div
+			audio#audiosection2(src='', controls='controls') 
+			br
+
+			p Score :
+			form
+				input#moshidden2(type='hidden', name='hiddenmosscore2', value='')
+				input(type='radio', name='mosscore2', value='1')
+				|  1 Bad
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore2', value='2')
+				|  2 Poor
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore2', value='3')
+				|  3 Fair
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore2', value='4')
+				|  4 Good
+				|	&nbsp &nbsp
+				input(type='radio', name='mosscore2', value='5')
+				|  5 Excellent
+				|	&nbsp &nbsp
+		//- audio#audiosection(controls='')
+		//- 	source#sourcesection(src='/wav/M1F1-Alaw-AFsp.wav', type='audio/wav')
+		br
+		br
+
+	div#prefsection(style='display: block;')
+
+		h2#soundindexpref Preference Test 1. 
+		h2 การประเมินผลที่ 2 : โปรดเลือกเสียงสังเคราะห์ที่เป็นธรรมชาติมากที่สุดในแต่ละข้อของการทดสอบ
+
+		div
+			tr
+				td 
+					audio#audiosectionpref00(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+				td 
+					audio#audiosectionpref01(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+			tr
+				td 
+					form
+						input#prefhidden0(type='hidden', name='hiddenprefscore0', value='')
+
+						input#prefrad00(type='radio', name='prefscore0', value='')
+						|  Sound 1
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						input#prefrad01(type='radio', name='prefscore0', value='')
+						|  Sound 2
+				td 
+		br
+		div
+			tr
+				td 
+					audio#audiosectionpref10(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+				td 
+					audio#audiosectionpref11(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+			tr
+				td 
+					form
+						input#prefhidden1(type='hidden', name='hiddenprefscore1', value='')
+
+						input#prefrad10(type='radio', name='prefscore1', value='')
+						|  Sound 1
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						input#prefrad11(type='radio', name='prefscore1', value='')
+						|  Sound 2
+				td 
+		br
+		div
+			tr
+				td 
+					audio#audiosectionpref20(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+				td 
+					audio#audiosectionpref21(src='/wav/Yamaha-TG100-Whistle-C5.wav', controls='controls') 
+			tr
+				td 
+					form
+						input#prefhidden2(type='hidden', name='hiddenprefscore2', value='')
+						input#prefrad20(type='radio', name='prefscore2', value='')
+						|  Sound 1
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						input#prefrad21(type='radio', name='prefscore2', value='')
+						|  Sound 2
+				td 
+
+	br
+	br
+
+	h2 -----------------------------
+
+	div#endpage(style='display: block;')
+
+	script(type="text/javascript").
+		var testdata = !{testdata};
+		var mos_choices = !{mos_choices};
+		var pref_choice = !{pref_choice};			
+
+	h2 -----------------------------
+
+	div		
+		button#prev-button Previous
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		button#next-button Next
+
+	
